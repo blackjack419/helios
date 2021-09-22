@@ -1,0 +1,40 @@
+diff --git a/arch/arm/boards/beaglebone/Makefile b/arch/arm/boards/beaglebone/Makefile
+index 21a1a29d0..fbcb4e26a 100644
+--- a/arch/arm/boards/beaglebone/Makefile
++++ b/arch/arm/boards/beaglebone/Makefile
+@@ -1,3 +1,3 @@
+ lwl-y += lowlevel.o
+ obj-y += board.o
+-bbenv-y += defaultenv-beaglebone
++#bbenv-y += defaultenv-beaglebone
+diff --git a/arch/arm/boards/beaglebone/board.c b/arch/arm/boards/beaglebone/board.c
+index 9e579d1b9..77977282d 100644
+--- a/arch/arm/boards/beaglebone/board.c
++++ b/arch/arm/boards/beaglebone/board.c
+@@ -56,7 +56,7 @@ mem_initcall(beaglebone_mem_init);
+ 
+ static int beaglebone_devices_init(void)
+ {
+-	int black;
++//	int black;
+ 
+ 	if (!of_machine_is_compatible("ti,am335x-bone"))
+ 		return 0;
+@@ -68,13 +68,13 @@ static int beaglebone_devices_init(void)
+ 			omap_set_bootmmc_devname("mmc1");
+ 	}
+ 
+-	black = is_beaglebone_black();
++//	black = is_beaglebone_black();
+ 
+-	defaultenv_append_directory(defaultenv_beaglebone);
++//	defaultenv_append_directory(defaultenv_beaglebone);
+ 
+-	globalvar_add_simple("board.variant", black ? "boneblack" : "bone");
++//	globalvar_add_simple("board.variant", black ? "boneblack" : "bone");
+ 
+-	printf("detected 'BeagleBone %s'\n", black ? "Black" : "White");
++//	printf("detected 'BeagleBone %s'\n", black ? "Black" : "White");
+ 
+ 	armlinux_set_architecture(MACH_TYPE_BEAGLEBONE);
+ 

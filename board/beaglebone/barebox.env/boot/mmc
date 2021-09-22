@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# Kernel
+global.bootm.image=/boot/zImage
+
+# Base device tree
+global.bootm.oftree=/boot/am335x-boneblack.dtb
+
+# Initramfs
+#global.bootm.initrd=<path to initrd>
+
+# Bootargs
+if [ $bootsource_instance == 0 ]; then
+	bootdev="mmcblk0"
+else
+	bootdev="mmcblk1"
+fi
+global.linux.bootargs.dyn.root="root=/dev/${bootdev}p2 rootfstype=ext4 rootwait ro fsck.repair=yes"

@@ -1,0 +1,5 @@
+# Testing/environment scripts
+deploy
+
+# Build files
+output/* 

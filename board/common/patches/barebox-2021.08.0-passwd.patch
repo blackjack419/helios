@@ -1,0 +1,7 @@
+diff --git a/login.digest b/login.digest
+new file mode 100644
+index 000000000..050ada8ad
+--- /dev/null
++++ b/login.digest
+@@ -0,0 +1 @@
++8a59843a8700568e77d00138736d5f6f1db95ac793c440b21882ac425b768561ff64736fe5a65c50ef30a2fb7f15d8188b04b5317fdc98efa6e12c04200a5ea5

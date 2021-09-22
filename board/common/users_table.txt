@@ -1,0 +1,7 @@
+# See the buildroot docs/manual/makeusers-syntax.txt for help
+
+# This table specifies the linux users (and associated groups) 
+# that shall be created before packing up the image
+#
+# <username>	<uid>	<group>	<gid>	<passwd>	<home>		<shell>		<groups>	<comment>
+admin		-1	admin	-1	-		/home/admin	/bin/bash	-		Administrator	

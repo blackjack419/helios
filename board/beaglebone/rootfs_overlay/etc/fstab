@@ -1,0 +1,3 @@
+# <file system>		<dir>		<type>	<options>				<dump>	<fsck>
+LABEL=rootfs		/		ext4	defaults				0	0
+tmpfs			/tmp		tmpfs	nosuid,nodev,noatime,noexec		0	0			
