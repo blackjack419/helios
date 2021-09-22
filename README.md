@@ -16,13 +16,11 @@ The design choices for heliOS stem from three main tenents:
 3. **Futuristic** - Software is a living, breathing thing; if its not growing, then it is dying. Choices must be made to ensure that heliOS is future-proofed for the next decade and beyond by using modern widely accepted embedded design paradigms and limiting dependncies to well-maintained and documented projects.
 
 ## Buildroot
----
-HeliOS is assembled using the buildroot framework. The master buildroot configuration file for each device will exist in the `configs/` directory. 
+heliOS is assembled using the buildroot framework. The master buildroot configuration file for each device will exist in the `configs/` directory. 
 
 Before continuing, it is recommended to familiarize yourself with the buildroot system by perusing the [buildroot manual](https://buildroot.org/downloads/manual/manual.html).
 
 ## Building Devices
----
 The output of the buildroot system ultimately produces an image which can be used to flash a microprocessor on an embedded device. Each device will hae its own folder to house the entirety of the buildroot build for that particular board/architecture. By default these will be located in the `output/` directory. 
 
 To create a new device:
@@ -32,7 +30,7 @@ mkdir my_device
 cd my_device
 make -C /path/to/buildroot O=${PWD} BR2_EXTERNAL=/path/to/helios menuconfig
 ```
-subseqeunt calls to make from this directory can omit the options as they are stored in the newly created `.config` file. 
+Subseqeunt calls to make from this directory can omit the options as they are stored in the newly created `.config` file. 
 
 
 The following commands are described in detail in the buildroot manual, but are listed here for quick reference as they are the most common commands you will use in building and configuring the system. They must be run from the device folder (i.e. `output/my_device/`):
@@ -55,7 +53,6 @@ The following commands can be used to save the respective configuration file to 
 The locations these files are saved in are adjusted in the master buildroot configuration.
 
 ## Barebox (Bootloader)
----
 HeliOS uses barebox as the default bootloader. The functionality of barebox is controlled in the environment - a directory of scripts and variable files.
 
 | Environment | Purpose |
