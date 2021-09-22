@@ -21,7 +21,7 @@ heliOS is assembled using the buildroot framework. The master buildroot configur
 Before continuing, it is recommended to familiarize yourself with the buildroot system by perusing the [buildroot manual](https://buildroot.org/downloads/manual/manual.html).
 
 ## Building Devices
-The output of the buildroot system ultimately produces an image which can be used to flash a microprocessor on an embedded device. Each device will hae its own folder to house the entirety of the buildroot build for that particular board/architecture. By default these will be located in the `output/` directory. 
+The output of the buildroot system ultimately produces an image which can be used to flash a microprocessor on an embedded device. Each device will have its own folder to house the entirety of the buildroot build for that particular board/architecture. By default these will be located in the `output/` directory. 
 
 To create a new device:
 ```
