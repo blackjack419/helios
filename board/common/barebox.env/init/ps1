@@ -1,0 +1,5 @@
+#!/bin/sh
+
+if [ ${global.allow_color} = "1" ]; then
+	export PS1="\e[1;36mbootloader:\e[2;33m\w\e[0m> "
+fi
