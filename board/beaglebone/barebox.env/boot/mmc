@@ -4,7 +4,7 @@
 global.bootm.image=/boot/zImage
 
 # Base device tree
-global.bootm.oftree=/boot/am335x-boneblack.dtb
+global.bootm.oftree=/boot/am335x-boneblack-helios.dtb
 
 # Initramfs
 #global.bootm.initrd=<path to initrd>
