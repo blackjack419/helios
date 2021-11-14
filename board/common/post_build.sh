@@ -15,12 +15,15 @@
 rm -rf ${TARGET_DIR}/opt
 rm -rf ${TARGET_DIR}/media
 
-# Remove unwanted openrc init files
-openrc_config=${TARGET_DIR}/etc/conf.d
+# [openrc] /etc/runlevels
+#   remove unwanted openrc startup scripts
 openrc_runtime=${TARGET_DIR}/etc/runlevels
-
 rm -f ${openrc_runtime}/boot/binfmt
 rm -f ${openrc_runtime}/boot/termencoding
 rm -f ${openrc_runtime}/boot/save-termencoding
 rm -f ${openrc_runtime}/default/netmount
+
+# [openrc] /etc/conf.d
+#   remove unnecessary openrc configs
+openrc_config=${TARGET_DIR}/etc/conf.d
 rm -f ${openrc_config}/consolefont

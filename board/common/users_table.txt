@@ -4,4 +4,4 @@
 # that shall be created before packing up the image
 #
 # <username>	<uid>	<group>	<gid>	<passwd>	<home>		<shell>		<groups>	<comment>
-admin		-1	admin	-1	-		/home/admin	/bin/bash	-		Administrator	
+admin		-1	admin	-1	-		/home/admin	/bin/bash	sudo		Administrator	
