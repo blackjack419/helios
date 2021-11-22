@@ -2,48 +2,18 @@
 # Seperate commands with ;
 # Prefix with ! to run a shell script.
 # Use \$int to represent the interface
-#ifconfig_eth0="192.168.0.10 netmask 255.255.255.0"
 
-# You also have ifup_eth0 and ifdown_eth0 to run other commands when
-# eth0 is started and stopped.
-# You should note that we don't stop the network at system shutdown by default.
-# If you really need this, then set keep_network=NO
-
-# Lastly, the interfaces variable pulls in virtual interfaces that cannot
+# Interfaces variable pulls in virtual interfaces that cannot
 # be automatically detected.
 #interfaces="br0 bond0 vlan0"
-
-# You can also use files instead of variables here if you like:
-# /etc/ifconfig.eth0 is equivalent to ifconfig_eth0
-# /etc/ip.eth0 is equivalent to ifconfig_eth0
-# /etc/ifup.eth0 is equivalent to ifup_eth0
-# /etc/ifdown.eth0 is equivalent to ifdown_eth0
-# Any files found will automatically be put into the interfaces variable.
-# You don't need to escape variables in files, so use $int instead of \$int.
-
-# If you require DHCP, you should install dhcpcd and add it to the boot or
-# default runlevel.
 
 # NIS users can set the domain name here
 #domainname="foobar"
 
-# You can add a default route.
-# The way this is done is slightly different depending on the operating system.
-#
-# *BSD:
-#defaultroute="192.168.0.1"
-#defaultroute6="2001:a:b:c"
-#Hurd/Linux (ifconfig):
-#defaultroute="gw 192.168.0.1"
-#defaultroute6="gw 2001:a:b:c"
-
-# The remainder of this file applies to Linux only and shows how
-# iproute2 is supported along with other examples.
-
 # ifconfig under Linux is not that powerful and doesn't easily handle
 # multiple addresses
 # On the other hand, iproute2 is quite powerful and is also supported
-ip_eth0="192.168.20.155/24
+ip_eth0="192.168.20.155/24"
 
 # You can also use iproute2 to add the default route.
 #defaultiproute="via 192.168.0.1"
