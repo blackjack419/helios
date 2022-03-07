@@ -9,15 +9,15 @@ shopt -s checkwinsize
 
 # set a fancy color prompt
 if [ "`id -u`" -eq 0 ]; then
-	PS1='\[\033[01;31m\]\u\[\033[01;33m\]@\h\[\033[00m\]:\[\033[01;30m\]\w\[\033[00m\]> '
+        PS1='\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;37m\]\w\[\033[00m\]> '
 else
-	PS1='\[\033[01;33m\]\u@\h\[\033[00m\]:\[\033[01;30m\]\w\[\033[00m\]> '
+        PS1='\[\033[01;33m\]\u@\h\[\033[00m\]:\[\033[01;37m\]\w\[\033[00m\]> '
 fi
 
 # System Aliases
 LS_OPTIONS="--color=always"
 alias ..='cd ..'
-alias nano='nano -K'
+alias nano='nano -Kz'
 alias edit='nano -Asciw$'
 alias ls='ls ${LS_OPTIONS}'
 alias l='ls ${LS_OPTIONS} -Al'
